@@ -31,7 +31,7 @@ var bannedId = '498543956326481940'
 var prefix = '/'
 var ownerID = '450229647100346378';
 var ownerUsername = 'Gaspar QLF#8743';
-var version = 'v0.9'
+var version = 'v1.0'
 var ownerDM = '486593719173382144';
 
 const botbanned_embed = {embed:{
