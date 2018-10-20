@@ -105,7 +105,7 @@ bot.on('ready' , () => {
     }, 10000)
 })*/
 
-bot.login('process.env.TOKEN')
+bot.login(process.env.TOKEN)
 
 /*bot.on('message', message =>{
     if (!message.content.startsWith(prefix)) return;
