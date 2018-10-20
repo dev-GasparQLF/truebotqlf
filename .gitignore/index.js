@@ -105,8 +105,7 @@ bot.on('ready' , () => {
     }, 10000)
 })*/
 
-bot.login('NDg2NTkzNzE5MTczMzgyMTQ0.Dqirng.qIn3FsY4gtsAMdILNmC8TlKB550')
-//bot.login("mfa.FK-lpKrOB0yj56L6kuGgbjkKivjB-i6hm4G1xOMM9_KcS_wIksucAPYBBubhLoBnxnhjCDCX5stiIqVnTN5i")
+bot.login('process.env.TOKEN')
 
 /*bot.on('message', message =>{
     if (!message.content.startsWith(prefix)) return;
