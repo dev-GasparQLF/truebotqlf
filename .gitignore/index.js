@@ -46,9 +46,9 @@ const botbanned_embed = {embed:{
 
 const serverStats = {
     guildID: '486612994386690059',
-    totalUsersID: '493059673398706176',
-    memberCountID: '493059750943129600',
-    botCountID: '493059818249256960'
+    totalUsersID: '503168985802604544',
+    memberCountID: '503169024322961418',
+    botCountID: '503169057353105456'
 };
 
 var guildMe = '486612994386690059';
@@ -73,7 +73,7 @@ var guildMe = '486612994386690059';
 //READY
 bot.on('ready' , () => {
     console.log('Je suis pret !')
-    bot.channels.get('486893349274648576').send('Je suis reconnecté !')
+    bot.channels.get('503168236519686168').send('Je suis reconnecté !')
     //bot.user.setGame(`${prefix}help | ${version} | ${bot.users.size} users` , 'https://twitch.tv/gaspar_qlf')
     var oyun = [
         `${prefix}help | ${version}`, 
@@ -354,8 +354,8 @@ bot.on('message' , message => {
             .setColor('RANDOM')
             .addField('Decription du message du bug : ', `*${message.author.tag}* report le *${message.createdAt}* , ID de l'auteur : **${message.author.id}**`)
             .setTimestamp(new Date())
-        bot.channels.get('503124867017867284').send(reportEmbed)
-        bot.channels.get('503124867017867284').send(`<@${ownerID}> ! Look bug !`)
+        bot.channels.get('503168298221830154').send(reportEmbed)
+        bot.channels.get('503168298221830154').send(`<@${ownerID}> ! Look bug !`)
         message.reply('problème envoyé ! :white_check_mark: ')
     }
 
@@ -385,7 +385,7 @@ bot.on('guildMemberAdd' , member => {
     if(member.guild.id !== guildMe) return;
 
     console.log('Le membre ' + member.user.username + " vient de rejoindre le serveur !")
-    bot.channels.get('486907981188038657').send(`**${member}** vient de rejoindre le serveur ! Bienvenue à toi !! :grinning:`)
+    bot.channels.get('503170000131981313').send(`**${member}** vient de rejoindre le serveur ! Bienvenue à toi !! :grinning:`)
 
     var role = member.guild.roles.find('name', 'Membre');
 
@@ -421,7 +421,7 @@ bot.on('message', message => {
 bot.on('guildMemberRemove', member => {
     if(member.guild.id !== guildMe) return;
 
-    bot.channels.get('486907981188038657').send("**" + member.user.username + "** vient de quitter le serveur... :cry:")
+    bot.channels.get('503170000131981313').send("**" + member.user.username + "** vient de quitter le serveur... :cry:")
     console.log('Le membre ' + member.user.username + " vient de quitter le serveur !")
 
     if(member.guild.id !== serverStats.guildID) return;
@@ -504,14 +504,14 @@ bot.on('message', message => {
 //GUILD CREATE
 bot.on("guildCreate", guild => {
     //  when the bot joins a guild.
-    bot.channels.get('486616084179582976').send(`Ajout du serveur **${guild.name}** dont il y a ${guild.memberCount} membres et dont l'owner est **${guild.owner.user.tag}**`)
+    bot.channels.get('503170222220378123').send(`Ajout du serveur **${guild.name}** dont il y a ${guild.memberCount} membres et dont l'owner est **${guild.owner.user.tag}**`)
     console.log(`Ajout du serveur: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
 });
 
 //GUILD DELETE
 bot.on("guildDelete", guild => {
     // when the bot is removed from a guild.
-    bot.channels.get('486616084179582976').send(`Leave du serveur **${guild.name}** dont il y a ${guild.memberCount} membres et dont l'owner est **${guild.owner.user.tag}**`)
+    bot.channels.get('503170222220378123').send(`Leave du serveur **${guild.name}** dont il y a ${guild.memberCount} membres et dont l'owner est **${guild.owner.user.tag}**`)
     console.log(`Leave du serveur: ${guild.name} (id: ${guild.id})`);
 });
 
